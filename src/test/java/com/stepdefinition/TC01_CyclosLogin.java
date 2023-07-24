@@ -49,6 +49,7 @@ public class TC01_CyclosLogin extends BaseClass {
 		unconditionalWait(5000);
 		WebElement errorMsg = pom.getLoginPage().getErrorMsg();
 		String text = getText(errorMsg);
+		Assert.assertEquals(message, text);
 	}
 
 }
